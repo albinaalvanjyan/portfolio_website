@@ -8,6 +8,7 @@
 
 body {
     cursor: url('images/icons8-cursor-32.png') 8 8, auto;
+    background-color: #fff;
 }
 
 .background-vid {
@@ -144,6 +145,8 @@ body {
 .title_img {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap:20px;
 }
 
 .img_box {
@@ -168,7 +171,6 @@ body {
 }
 
 .shortinfo_cv {
-    margin-top: 50px;
     display: flex;
     align-items: center;
     gap: 100px;
@@ -347,6 +349,9 @@ body {
     transition: 0.3s;
     cursor: url('images/icons8-hand-cursor-48.png') 16 16, pointer;
 }
+.bx::before{
+    margin-right: 6px;
+}
 
 .project-info button a {
     text-decoration: none;
@@ -358,7 +363,7 @@ body {
 }
 
 
-#contactpage p {
+#contactpage p, #contactpage_mobile p {
     margin-top: 20px;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -548,4 +553,23 @@ input::placeholder {
     .contact-box label {
         width: 100%;
     }
+}
+@media(max-width: 380px){
+    .left-links_mobile h2{
+        font-size: 18px;
+    }
+    .left-links_mobile span{
+        font-size: 12px;
+    }
+    .social-icons_mobile{
+        flex-wrap: wrap;
+    }
+    .title_img{
+    flex-direction: column;
+align-items: start;
+margin-top: 50px;
+    }
+   .img_box{
+    display: none;
+   }
 }
